@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "b3e5baba-1234-4a4b-8e12-c2e3a123f123",
+		"name": "BookAPI_Postman_Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. GET - Lay Danh Sach / Tim Kiem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9999/api/Books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"api",
+						"Books"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "C#",
+							"disabled": true,
+							"description": "Bo tick tab Disabled neu muon tim kiem sach"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. POST - Them Moi Sach co Anh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Title",
+							"value": "C# Cơ Bản",
+							"type": "text"
+						},
+						{
+							"key": "Author",
+							"value": "Nguyễn Văn A",
+							"type": "text"
+						},
+						{
+							"key": "Price",
+							"value": "120000",
+							"type": "text"
+						},
+						{
+							"key": "CategoryID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "ImageFile",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9999/api/Books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"api",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. PUT - Cap Nhat Sach (Thay doi URL thanh ID thuc te)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Title",
+							"value": "C# Nâng Cao Hơn Đầu",
+							"type": "text"
+						},
+						{
+							"key": "Author",
+							"value": "Nguyễn Văn B",
+							"type": "text"
+						},
+						{
+							"key": "Price",
+							"value": "250000",
+							"type": "text"
+						},
+						{
+							"key": "CategoryID",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "ImageFile",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9999/api/Books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"api",
+						"Books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. DELETE - Xoa Sach (Thay doi URL thanh ID thuc te)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9999/api/Books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"api",
+						"Books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
