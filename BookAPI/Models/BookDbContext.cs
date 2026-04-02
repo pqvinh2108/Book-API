@@ -13,9 +13,9 @@ public class BookDbContext : DbContext
             .HasColumnType("decimal(18,2)");
 
         modelBuilder.Entity<Category>().HasData(
-            new Category { CategoryID = 1, CategoryName = "Programming" },
-            new Category { CategoryID = 2, CategoryName = "Networking" },
-            new Category { CategoryID = 3, CategoryName = "Database" }
+            new Category { CategoryID = 1, CategoryName = "Truyện" },
+            new Category { CategoryID = 2, CategoryName = "Tiểu thuyết" },
+            new Category { CategoryID = 3, CategoryName = "Văn học" }
         );
 
         modelBuilder.Entity<Book>().HasData(
